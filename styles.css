@@ -1,0 +1,656 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.menu{
+    display: flex;
+    flex-flow: row wrap;
+    height: 135px;
+}
+.menu li{
+    font-size: 1em;
+    display: flex;
+    height: 50%;
+}
+.menu li a{
+    color: #0065FC;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.logo{
+    flex: 5;
+    order: 1;
+}
+.logo img{
+    align-self: end;
+    margin-right: 50px;
+}
+.signin{
+    order: 2;
+    width: 50%;
+    font-weight: 700;
+    padding: 8% 0 0 20%;
+}
+.tab{
+    order: 3;
+    width: 50%;
+    text-align: center;
+}
+.tab a{
+    height: 100%;
+    margin-top: 10px;
+}
+.menu :nth-of-type(3), .menu .tab:hover{
+    border-bottom: 3px solid #0065FC;
+}
+.menu :nth-of-type(4){
+    border-bottom: 3px solid #f2f2f2;
+}
+.menu :nth-of-type(4) a{
+    color: black;
+}
+.menu :nth-of-type(4) a:hover{
+    color: #0065FC;
+}
+
+/* partie recherche et filtres */
+
+.container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 8%;
+    font-size: 17px;
+}
+.container h1{
+    font-size: 1.3em;
+    padding-right: 5%;
+}
+.intro{
+    line-height: 3;
+    font-size: 16px;
+}
+form{
+    display: flex;
+    margin: 6% 0;
+}
+form:focus-within{
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px red;
+}
+.search-icon{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background: #F2F2F2;
+    font-size: 17px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.search-bar{
+    border: 1px solid #d9d9d9;
+    font-family: "Raleway", sans-serif;
+    width: 75%;
+    height: 50px;
+    font-weight: 700;
+    font-size: 17px;
+    padding-left: 17px;
+    position: relative;
+    border-right: 0;
+}
+.search-bar::placeholder{
+    color: black;
+    opacity: 1;
+}
+.search-btn{
+    border: 0;
+    background: #0065FC;
+    width: 50px;
+    height: 50px;
+    right: 5%;
+    position: absolute;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.search-btn i {
+    color: #fff;
+}
+.filter-content{
+    display: flex;
+    flex-flow:column wrap;
+    margin-top: 15px;
+}
+.blue-icon{
+    border-radius: 50%;
+    color: #0065FC;
+}
+.filter-title{
+    font-weight: 700;
+}
+.filter-category{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5% auto;
+    justify-content: space-between;
+}
+.filter-category li{
+    cursor: pointer;
+    border: 2px solid #d9d9d9;
+    border-radius: 30px;
+    border-left: 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 15px 13px 0;
+    padding-right: 15px;
+    font-size: 16px;
+    height: 50px;
+}
+.filter-category li:hover{
+    transform: scale(1.1);
+    transition: all .2s ease-out;
+}
+.filter-category span{
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    background: #DEEBFF;
+    border-radius: 50%;
+    height: 50px;
+    width: 48px;
+}
+.filter-category span i {
+    align-self: center;
+    font-size: 1em;
+}
+.info{
+    font-size:.9em;
+    display: flex;
+    align-items: baseline;
+}
+.info span{
+    margin-right: 10px;
+}
+.info span i{
+    border: 1px solid #DEEBFF;
+    padding: 5px 8px;
+}
+
+/* Partie hebergement, populaires et acrivite */
+
+.section-container, .wrapper, .container-card, .legend{
+    display: flex;
+    flex-flow: column;
+}
+.popular, .home, .activity{
+    padding: 10% 5% 10% 6%;
+}
+.section-container{
+    margin-top: 35px;
+}
+h2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: baseline;
+    padding-bottom: 6%;
+    font-size: 1.4em;
+}
+h2 .fa-chart-line{
+    font-size: 1em;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: .1em .1em .5em  #dedede;
+}
+.card img{
+    object-fit: cover;
+    width: 100%;
+    padding: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.legend{
+    font-size: .8em;
+    margin-top: auto;
+}
+.legend h3{
+    flex-grow: 2;
+}
+ .legend p{
+    flex-grow: 8;
+}
+ .legend .rating{
+    flex-grow: 0;
+    letter-spacing: -1px;
+}
+.blue-rate{
+    color: #0065FC;
+}
+.grey-rate{
+    color: #d9d9d9;
+}
+.popular{
+    order: 1;
+    background: #f2f2f2;
+}
+.popular .card{
+    flex-direction: row;
+    height: 150px;
+}
+.popular .card img{
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 140px;
+    height: 150px;
+}
+.popular .legend{
+    margin: auto 0;
+    margin-left: 156px;
+    width: 46%;
+    height: 80%;
+}
+.home{
+    order: 2;
+}
+.home .card{
+    height: 200px;
+    margin-top: 5px;
+}
+.home img{
+    height: 125px;
+}
+.home .legend{
+    line-height: 1.7;
+    padding: 0% 0 2% 5%;
+}
+.activity{
+    order: 3;
+}
+.activity .container-card{
+    height: 100%;
+}
+.activity .card{
+    height: 190px;
+}
+.activity img{
+    height: 100%;
+    padding: 0;
+}
+.activity .container-card .card:nth-of-type(4) img{
+    filter: brightness(1.3);
+}
+.activity .legend{
+    padding: 5% 0 5% 5%;
+    position: absolute;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    height: 55px;
+}
+.home-options{
+    font-weight: 700;
+    padding-top: 5%;
+    font-size: 1.15em;
+    width: 170px;
+}
+
+/* Partie footer */
+.footer{
+    background: #f2f2f2;
+    font-size: .9em;
+    padding: 13% 0 0 8%;
+}
+.footer h3{
+    padding-bottom: 15px;
+}
+.footer ul{
+    padding-bottom: 30px;
+}
+.footer ul li{
+    padding-bottom: 13px;
+}
+
+/* compatibilité desktop */
+@media screen and (min-width:1025px){
+    .menu li{
+        border-bottom: 0;
+        height: 65%;
+        font-size: 1.3em;
+    }
+    .menu li a{
+        align-items: end;
+        justify-content: center;
+    }
+    .menu :nth-of-type(3),
+    .menu :nth-of-type(4):hover{
+        border-top: 3px solid #0065FC;
+        border-bottom:0;
+    }
+    .menu :nth-of-type(4),
+    .menu :nth-of-type(3):hover{
+        border-bottom:0;
+    }
+    .logo{
+        flex: 6;
+        align-self: center;
+    }
+    .logo img{
+        width: 130px;
+        margin: 0;
+    }
+    .menu .logo a{
+        width: 245px;
+        margin-top: 10px;
+    }
+    .tab{
+        order: 2;
+        flex: 1 1;
+        width: 0;
+    }
+    .tab a{
+        margin: 0;
+    }
+    .signin{
+        order: 3;
+        flex: 1;
+        padding-top: 84px;
+        padding: 0;
+    }
+
+    /* partie recherche et filtres */
+
+    .container, .section-container{
+        margin: 0;
+        padding: 33px 0 0 60px;
+        font-size: 1.4em;
+    }
+    .intro{
+        line-height: 2;
+        font-size: .9em;
+        padding-bottom: 15px;
+    }
+    form{
+        margin: 0;
+        width: 35%;
+    }
+    form:focus-within{
+        border-radius: 20px;
+    }
+    .search-icon{
+        border-bottom-left-radius: 20px;
+        border-top-left-radius:20px;
+        width: 75px;
+    }
+    .search-icon i {
+        font-size: 22px;
+    }
+    .search-bar, .search-icon, .search-btn{
+        height: 65px;
+    }
+    .search-bar{
+        width: 100%;
+        padding-left: 2.5%;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .search-bar::placeholder{
+        font-size: 1.3em;
+    }
+    .search-btn{
+        border-bottom-left-radius: 0;
+        border-top-left-radius:0;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius:20px;
+        left: 24%;
+        width: 170px;
+    }
+    .search-btn i{
+        display: none;
+    }
+    .search-btn::after{
+        content: "Rechercher";
+        font-family: 'Raleway', sans-serif;
+        color: #fff;
+        font-weight: 700;
+        font-size: 22px;
+    }
+    .filter-content{
+        margin: 26px 0 0 10px;
+        flex-flow: row;
+        align-items: center;
+        width: 100%;
+    }
+    .filter-title{
+        margin: 0 2.5% 0 0;
+    }
+    .filter-category{
+        margin: 1% 0 1% 0;
+        justify-content: space-between;
+        width: 65%;
+    }
+    .filter-category li{
+        margin: 0;
+        height: 60px;
+        width: auto;
+        font-size: 1em;
+        padding-right: 25px;
+    }
+    .filter-category span{
+        height: 60px;
+        width: 60px;
+        margin-right: 15px;
+    }
+    .info{
+        margin: 25px 0 10px 10px;
+    }
+
+    /* partie hébergement populaire et activité */
+
+    .section-container{
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding-bottom: 60px;
+    }
+    .wrapper{
+        padding: 0;
+    }
+    h2{
+        font-size: 1.2em;
+    }
+    .home, .popular{
+        border-radius: 20px;
+        padding: 50px 50px 10px 50px;
+    }
+    .card{
+        margin-bottom: 30px;
+    }
+    .legend{
+        font-size: .7em;
+    }
+    .container-card{
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .home{
+        order: 1;
+        width: 65%;
+        background: #f2f2f2;
+    }
+    .home .container-card .card{
+        width: 30%;
+        height: 250px;
+        margin-top: 0;
+    }
+    .home .container-card .card img{
+        height: 160px;
+    }
+    .home .legend{
+        line-height: 1.5;
+        padding: 0 0 3% 7%;
+    }
+    .home-options{
+        padding: 20px 0 40px 0;
+        font-size: .9em;
+    }
+    .popular{
+        order: 2;
+        width: 30%;
+        margin: 0 auto;
+    }
+    .popular h2, .home h2{
+        padding-bottom: 25px;
+    }
+    .popular .container-card .card{
+        width: 100%;
+        height: 170px;
+        margin-bottom: 40px;
+    }
+    .popular .container-card .card img{
+        height: 100%;
+        width: 38%;
+    }
+    .popular .legend{
+        margin-left: 170px;
+    }
+    .activity{
+        order: 3;
+        width: 97.5%;
+        padding: 70px 0 0 0;
+        height: 650px;
+    }
+    .activity h2{
+        padding-bottom: 30px;
+    }
+    .activity .card{
+        margin: 0;
+    }
+    .activity .container-card{
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .activity .container-card .card{
+        width: 22%;
+        overflow: hidden;
+    }
+    .activity .legend{
+        height: 63px;
+    }
+    /* Traitement de chaque card indépendament selon leur taille et leur largeur dans la mosaïque */
+    .activity .container-card .card:nth-of-type(1){
+        order: 1;
+        height: 100%;
+    }
+    .activity .container-card .card:nth-of-type(2){
+        order: 2;
+        height: 52%;
+    }
+    .activity .container-card .card:nth-of-type(3){
+        order: 2;
+        height: 40%;
+    }
+    .activity .container-card .card:nth-of-type(4){
+        order: 3;
+        height: 100%;
+    }
+    .activity .container-card .card:nth-of-type(5){
+        order: 4;
+        height: 45%;
+    }
+    .activity .container-card .card:nth-of-type(6){
+        order: 4;
+        height: 47%;
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0 0 60px;
+    }
+    .footer nav{
+        width: 60%;
+    }
+}
+
+/* compatibilité tablette */
+@media (min-width:760px) and (max-width:1024px){
+    .container{
+        width: 93%;
+    }
+    form{
+        width: 88%;
+    }
+    .search-btn{
+        right: 122px;
+    }
+    .search-bar{
+        width: 90%;
+    }
+    .filter-category{
+        margin: 3% auto;
+    }
+    .filter-category li{
+        font-size: 14px;
+    }
+    .wrapper{
+        padding: 25px;
+    }
+    .wrapper h2{
+        width: 88%;
+        margin: 0 auto;
+    }
+    .popular .container-card, .home .container-card, .activity .container-card{
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 13px;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .popular .card, .home .card, .activity .card{
+        width: 48%;
+        flex-direction: column;
+    }
+    .home .legend{
+        padding: 0 0 5% 7%;
+    }
+    .home-options{
+        margin: auto;
+        text-align: center;
+    }
+    .footer{
+        padding: 20px 0 0 0 ;
+        display: flex;
+        justify-content: space-around;
+    }
+}
