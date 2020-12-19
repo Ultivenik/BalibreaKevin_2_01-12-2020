@@ -16,15 +16,13 @@ body{
 .menu{
     display: flex;
     flex-flow: row wrap;
-    height: 135px;
+    height: 8.2rem;
+    overflow: hidden;
 }
 .menu li{
-    font-size: 1em;
-    display: flex;
-    height: 50%;
+    width: 50%;
 }
 .menu li a{
-    color: #0065FC;
     height: 100%;
     width: 100%;
     align-items: center;
@@ -36,23 +34,20 @@ body{
     order: 1;
 }
 .logo img{
-    align-self: end;
-    margin-right: 50px;
+    margin: .55em 0 0 -3em;
+    width: 6em;
 }
 .signin{
     order: 2;
-    width: 50%;
     font-weight: 700;
-    padding: 8% 0 0 20%;
+}
+.signin a{
+    margin: .6em 0 0 2.3em;
 }
 .tab{
     order: 3;
     width: 50%;
     text-align: center;
-}
-.tab a{
-    height: 100%;
-    margin-top: 10px;
 }
 .menu :nth-of-type(3), .menu .tab:hover{
     border-bottom: 3px solid #0065FC;
@@ -63,29 +58,34 @@ body{
 .menu :nth-of-type(4) a{
     color: black;
 }
-.menu :nth-of-type(4) a:hover{
+.menu li a,
+.menu :nth-of-type(4) a:hover,
+.filter-category span i,
+.info span i,
+.legend .rating i{
     color: #0065FC;
 }
 .container{
-    width: 90%;
+    width: 89%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    padding-top: 8%;
-    font-size: 17px;
+    padding-top: 8.4%;
+    font-size: 16px;
 }
 .container h1{
-    font-size: 1.3em;
+    font-size: 1.35em;
     padding-right: 5%;
 }
 .intro{
     line-height: 3;
-    font-size: 16px;
+    font-size: 1em;
+    margin-bottom: 6%;
 }
 form{
     display: flex;
-    margin: 6% 0;
+    position: relative;
 }
 form:focus-within{
     border-radius: 15px;
@@ -95,58 +95,55 @@ form:focus-within{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     background: #F2F2F2;
-    font-size: 17px;
-    width: 50px;
+    width: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
 }
+.search-icon i{
+    font-size: 1.1em;
+}
 .search-bar{
-    border: 1px solid #d9d9d9;
+    border: 1px solid #f2f2f2;
     font-family: "Raleway", sans-serif;
     width: 75%;
-    height: 50px;
     font-weight: 700;
-    font-size: 17px;
-    padding-left: 17px;
-    position: relative;
+    font-size: 1.1em;
+    padding-left: 5%;
     border-right: 0;
 }
 .search-bar::placeholder{
     color: black;
-    opacity: 1;
+    opacity: 1; /*Compatibilité Firefox*/
 }
 .search-btn{
     border: 0;
     background: #0065FC;
     width: 50px;
     height: 50px;
-    right: 5%;
+    right: 0;
     position: absolute;
     border-radius: 15px;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 1em;
 }
 .search-btn i {
     color: #fff;
 }
 .filter-content{
+    margin-top: 11%;
     display: flex;
     flex-flow:column wrap;
-    margin-top: 15px;
-}
-.blue-icon{
-    border-radius: 50%;
-    color: #0065FC;
 }
 .filter-title{
     font-weight: 700;
+    font-size: 1.1em;
 }
 .filter-category{
     display: flex;
     flex-wrap: wrap;
-    margin: 5% auto;
+    margin: 4% auto;
     justify-content: space-between;
 }
 .filter-category li{
@@ -157,10 +154,9 @@ form:focus-within{
     display: flex;
     align-items: center;
     font-weight: bold;
-    margin: 0 15px 13px 0;
-    padding-right: 15px;
-    font-size: 16px;
-    height: 50px;
+    margin: 0 3% 3.7% 0;
+    padding-right: 1em;
+    height: 3.2em;
 }
 .filter-category li:hover{
     transform: scale(1.1);
@@ -169,7 +165,7 @@ form:focus-within{
 .filter-category span{
     display: flex;
     justify-content: center;
-    margin-right: 10px;
+    margin-right: .7em;
     background: #DEEBFF;
     border-radius: 50%;
     height: 50px;
@@ -177,17 +173,18 @@ form:focus-within{
 }
 .filter-category span i {
     align-self: center;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 .info{
-    font-size:.9em;
+    font-size:1em;
     display: flex;
     align-items: baseline;
 }
 .info span{
-    margin-right: 10px;
+    margin-right: .7em;
 }
 .info span i{
+    border-radius: 50%;
     border: 1px solid #DEEBFF;
     padding: 5px 8px;
 }
@@ -196,28 +193,30 @@ form:focus-within{
     flex-flow: column;
 }
 .popular, .home, .activity{
-    padding: 10% 5% 10% 6%;
+    padding: 10% 5.5% 10% 5.5%;
+    font-size: 16px;
 }
 .section-container{
-    margin-top: 35px;
+    margin-top: 10%;
 }
 h2{
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: baseline;
-    padding-bottom: 6%;
+    padding-bottom: 8%;
     font-size: 1.4em;
 }
 h2 .fa-chart-line{
     font-size: 1em;
 }
 .card{
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     background: #fff;
     border-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom: .7em;
     position: relative;
     box-shadow: .1em .1em .5em  #dedede;
 }
@@ -234,23 +233,20 @@ h2 .fa-chart-line{
     position: absolute;
 }
 .legend{
-    font-size: .8em;
+    font-size: .85em;
     margin-top: auto;
 }
 .legend h3{
     flex-grow: 2;
 }
  .legend p{
-    flex-grow: 8;
+    flex-grow: 7;
 }
  .legend .rating{
     flex-grow: 0;
     letter-spacing: -1px;
 }
-.blue-rate{
-    color: #0065FC;
-}
-.grey-rate{
+.legend .rating .grey-rate{
     color: #d9d9d9;
 }
 .popular{
@@ -259,34 +255,42 @@ h2 .fa-chart-line{
 }
 .popular .card{
     flex-direction: row;
-    height: 150px;
+    height: 9em;
 }
 .popular .card img{
     border-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    width: 140px;
-    height: 150px;
+    width: 8.5em;
+    height: 100%;
 }
 .popular .legend{
     margin: auto 0;
-    margin-left: 156px;
+    margin-left: 11em;
     width: 46%;
     height: 80%;
 }
 .home{
     order: 2;
 }
+.home h2{
+    padding-bottom: 4%;
+}
 .home .card{
-    height: 200px;
-    margin-top: 5px;
+    height: 12.7em;
 }
 .home img{
-    height: 125px;
+    height: 8em;
 }
 .home .legend{
-    line-height: 1.7;
+    line-height: 1.6;
     padding: 0% 0 2% 5%;
+}
+.home-options{
+    font-weight: 700;
+    padding-top: 5%;
+    font-size: 1.15em;
+    width: 170px;
 }
 .activity{
     order: 3;
@@ -295,7 +299,8 @@ h2 .fa-chart-line{
     height: 100%;
 }
 .activity .card{
-    height: 190px;
+    height: 12em;
+    margin-bottom: 7%;
 }
 .activity img{
     height: 100%;
@@ -312,15 +317,9 @@ h2 .fa-chart-line{
     width: 100%;
     height: 55px;
 }
-.home-options{
-    font-weight: 700;
-    padding-top: 5%;
-    font-size: 1.15em;
-    width: 170px;
-}
 .footer{
     background: #f2f2f2;
-    font-size: .9em;
+    font-size: 1em;
     padding: 13% 0 0 8%;
 }
 .footer h3{
@@ -334,16 +333,9 @@ h2 .fa-chart-line{
 }
 
 /* compatibilité desktop */
-@media screen and (min-width:1025px){
+@media screen and (min-width:1200px){
     .menu li{
-        border-bottom: 0;
-        height: 65%;
         font-size: 1.3em;
-    }
-    .menu li a{
-        align-items: end;
-        justify-content: center;
-        padding-top: 70px;
     }
     .menu :nth-of-type(3),
     .menu :nth-of-type(4):hover{
@@ -356,47 +348,47 @@ h2 .fa-chart-line{
     }
     .logo{
         flex: 6;
-        align-self: center;
-    }
-    .logo img{
-        width: 130px;
-        margin: 13% 0 0 0;
+        justify-content: start;
     }
     .menu .logo a{
-        width: 245px;
-        margin-top: 10px;
-        padding: 0;
+        width: 24%;
+    }
+    .logo img{
+        width: 6em;
+        margin-top: 2.5em;
     }
     .tab{
         order: 2;
-        flex: 1 1;
+        flex: 1;
         width: 0;
-    }
-    .tab a{
-        margin: 0;
     }
     .signin{
         order: 3;
         flex: 1;
-        padding-top: 84px;
         padding: 0;
     }
-
+    .signin a {
+        margin: 0;
+        width: 70%;
+    }
     /* partie recherche et filtres */
 
-    .container, .section-container{
+    .container{
         margin: 0;
-        padding: 33px 0 0 60px;
+        padding: 3% 0 0 3.2%;
         font-size: 1.4em;
     }
     .intro{
         line-height: 2;
         font-size: .9em;
-        padding-bottom: 15px;
+        padding-bottom: 1%;
+        margin: 0;
     }
     form{
         margin: 0;
-        width: 35%;
+        width: 25.3em;
+        height: 3em;
+        padding: 0;
     }
     form:focus-within{
         border-radius: 20px;
@@ -404,15 +396,12 @@ h2 .fa-chart-line{
     .search-icon{
         border-bottom-left-radius: 20px;
         border-top-left-radius:20px;
-        width: 75px;
-    }
-    .search-icon i {
-        font-size: 22px;
     }
     .search-bar, .search-icon, .search-btn{
-        height: 65px;
+        height: 100%;
     }
     .search-bar{
+        font-size: .8em;
         width: 100%;
         padding-left: 2.5%;
         border-top-right-radius: 20px;
@@ -426,7 +415,6 @@ h2 .fa-chart-line{
         border-top-left-radius:0;
         border-bottom-right-radius: 20px;
         border-top-right-radius:20px;
-        left: 24%;
         width: 170px;
     }
     .search-btn i{
@@ -440,7 +428,7 @@ h2 .fa-chart-line{
         font-size: 22px;
     }
     .filter-content{
-        margin: 26px 0 0 10px;
+        margin: 1.5% 0 0 0;
         flex-flow: row;
         align-items: center;
         width: 100%;
@@ -466,28 +454,34 @@ h2 .fa-chart-line{
         margin-right: 15px;
     }
     .info{
-        margin: 25px 0 10px 10px;
+        margin-top: 2%;
+        padding: 0;
     }
     .section-container{
         flex-flow: row wrap;
         justify-content: space-between;
-        padding-bottom: 60px;
+        width: 94%;
+        margin: 2% auto;
     }
     .wrapper{
         padding: 0;
     }
     h2{
-        font-size: 1.2em;
+        font-size: 1.9em;
     }
     .home, .popular{
         border-radius: 20px;
-        padding: 50px 50px 10px 50px;
+        padding: 3%;
+        padding-bottom: 0;
+    }
+    .home img, .popular img{
+        padding: 6px;
     }
     .card{
-        margin-bottom: 30px;
+        margin-bottom: 3.5%;
     }
     .legend{
-        font-size: .7em;
+        font-size: 1em;
     }
     .container-card{
         flex-flow: row wrap;
@@ -500,31 +494,32 @@ h2 .fa-chart-line{
     }
     .home .container-card .card{
         width: 30%;
-        height: 250px;
+        height: 15em;
         margin-top: 0;
     }
-    .home .container-card .card img{
-        height: 160px;
+    .home img{
+        height: 9.5em;
     }
     .home .legend{
         line-height: 1.5;
         padding: 0 0 3% 7%;
     }
     .home-options{
-        padding: 20px 0 40px 0;
-        font-size: .9em;
+        padding: 0;
+        font-size: 1.4em;
+        margin-top: 1%;
     }
     .popular{
         order: 2;
-        width: 30%;
+        width: 29%;
         margin: 0 auto;
     }
     .popular h2, .home h2{
-        padding-bottom: 25px;
+        padding-bottom: 1em;
     }
     .popular .container-card .card{
         width: 100%;
-        height: 170px;
+        height: 11em;
         margin-bottom: 40px;
     }
     .popular .container-card .card img{
@@ -536,12 +531,12 @@ h2 .fa-chart-line{
     }
     .activity{
         order: 3;
-        width: 97.5%;
-        padding: 70px 0 0 0;
-        height: 650px;
+        width: 100%;
+        padding: 4% 0 0 0;
+        height: 45em;
     }
     .activity h2{
-        padding-bottom: 30px;
+        padding-bottom: 1em;
     }
     .activity .card{
         margin: 0;
@@ -557,7 +552,7 @@ h2 .fa-chart-line{
         overflow: hidden;
     }
     .activity .legend{
-        height: 63px;
+        height: 4.5em;
     }
     /* Traitement de chaque card indépendament selon leur taille et leur largeur dans la mosaïque */
     .activity .container-card .card:nth-of-type(1){
@@ -595,24 +590,24 @@ h2 .fa-chart-line{
 }
 
 /* compatibilité tablette */
-@media (min-width:760px) and (max-width:1024px){
+@media (min-width:760px) and (max-width:1100px){
     .container{
         width: 93%;
     }
     form{
         width: 88%;
     }
-    .search-btn{
-        right: 122px;
-    }
     .search-bar{
         width: 90%;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
     .filter-category{
         margin: 3% auto;
+        width: 100%;
     }
     .filter-category li{
-        font-size: 14px;
+        font-size: 1em;
     }
     .wrapper{
         padding: 25px;
@@ -624,7 +619,6 @@ h2 .fa-chart-line{
     .popular .container-card, .home .container-card, .activity .container-card{
         flex-direction: row;
         flex-wrap: wrap;
-        font-size: 13px;
         justify-content: space-between;
         width: 90%;
         margin: 0 auto;
@@ -632,6 +626,12 @@ h2 .fa-chart-line{
     .popular .card, .home .card, .activity .card{
         width: 48%;
         flex-direction: column;
+    }
+    .home .card{
+        height: 15em;
+    }
+    .home img{
+        height: 9em;
     }
     .home .legend{
         padding: 0 0 5% 7%;
@@ -641,7 +641,7 @@ h2 .fa-chart-line{
         text-align: center;
     }
     .footer{
-        padding: 20px 0 0 0 ;
+        padding: 1em;
         display: flex;
         justify-content: space-around;
     }
