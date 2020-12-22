@@ -7,6 +7,9 @@
     text-decoration: none;
     color: black;
 }
+:root{
+    font-size: 16px;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -16,7 +19,6 @@ body{
 .menu{
     display: flex;
     flex-flow: row wrap;
-    height: 8.2rem;
     overflow: hidden;
 }
 .menu li{
@@ -28,6 +30,7 @@ body{
     align-items: center;
     justify-content: center;
     display: flex;
+    padding: 1em;
 }
 .logo{
     flex: 5;
@@ -35,7 +38,7 @@ body{
 }
 .logo img{
     margin: .55em 0 0 -3em;
-    width: 6em;
+    width: 25.5vw;
 }
 .signin{
     order: 2;
@@ -72,24 +75,27 @@ body{
     justify-content: center;
     margin: 0 auto;
     padding-top: 8.4%;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .container h1{
-    font-size: 1.35em;
     padding-right: 5%;
+    font-size: 1.35em;
 }
 .intro{
     line-height: 3;
-    font-size: 1em;
     margin-bottom: 6%;
 }
 form{
     display: flex;
     position: relative;
+    height: 7.5vh;
 }
 form:focus-within{
     border-radius: 15px;
-    box-shadow: 0 0 0 2px red;
+    box-shadow: 0 0 0 2px blue;
+}
+.search-icon, .search-bar, .search-btn{
+    height: 100%;
 }
 .search-icon{
     border-top-left-radius: 15px;
@@ -99,7 +105,6 @@ form:focus-within{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
 }
 .search-icon i{
     font-size: 1.1em;
@@ -107,9 +112,11 @@ form:focus-within{
 .search-bar{
     border: 1px solid #f2f2f2;
     font-family: "Raleway", sans-serif;
-    width: 75%;
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+    width: 100%;
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     padding-left: 5%;
     border-right: 0;
 }
@@ -121,7 +128,6 @@ form:focus-within{
     border: 0;
     background: #0065FC;
     width: 50px;
-    height: 50px;
     right: 0;
     position: absolute;
     border-radius: 15px;
@@ -138,7 +144,7 @@ form:focus-within{
 }
 .filter-title{
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 .filter-category{
     display: flex;
@@ -149,14 +155,17 @@ form:focus-within{
 .filter-category li{
     cursor: pointer;
     border: 2px solid #d9d9d9;
-    border-radius: 30px;
+    border-radius: 40px;
     border-left: 0;
+    border-top-left-radius:6vmax ;
+    border-bottom-left-radius:6vmax ;
     display: flex;
     align-items: center;
     font-weight: bold;
+    font-size: 1rem;
     margin: 0 3% 3.7% 0;
-    padding-right: 1em;
-    height: 3.2em;
+    padding-right: 1rem;
+    height: 3rem;
 }
 .filter-category li:hover{
     transform: scale(1.1);
@@ -168,15 +177,15 @@ form:focus-within{
     margin-right: .7em;
     background: #DEEBFF;
     border-radius: 50%;
-    height: 50px;
-    width: 48px;
+    height: 3rem;
+    width: 3rem;
 }
 .filter-category span i {
+    font-size: 1.4rem;
     align-self: center;
-    font-size: 1.2em;
 }
 .info{
-    font-size:1em;
+    font-size: 1rem;
     display: flex;
     align-items: baseline;
 }
@@ -194,7 +203,6 @@ form:focus-within{
 }
 .popular, .home, .activity{
     padding: 10% 5.5% 10% 5.5%;
-    font-size: 16px;
 }
 .section-container{
     margin-top: 10%;
@@ -205,18 +213,17 @@ h2{
     width: 100%;
     align-items: baseline;
     padding-bottom: 8%;
-    font-size: 1.4em;
+    font-size: 5.8vw;
 }
 h2 .fa-chart-line{
     font-size: 1em;
 }
 .card{
-    font-size: 16px;
     display: flex;
     flex-direction: column;
     background: #fff;
-    border-radius: 20px;
-    margin-bottom: .7em;
+    border-radius: 25px;
+    margin-bottom: 2vh;
     position: relative;
     box-shadow: .1em .1em .5em  #dedede;
 }
@@ -224,8 +231,8 @@ h2 .fa-chart-line{
     object-fit: cover;
     width: 100%;
     padding: 5px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 .card a {
     width: 100%;
@@ -233,11 +240,11 @@ h2 .fa-chart-line{
     position: absolute;
 }
 .legend{
-    font-size: .85em;
+    font-size: 3.65vw;
     margin-top: auto;
 }
 .legend h3{
-    flex-grow: 2;
+    flex-grow: 1.5;
 }
  .legend p{
     flex-grow: 7;
@@ -255,18 +262,18 @@ h2 .fa-chart-line{
 }
 .popular .card{
     flex-direction: row;
-    height: 9em;
+    height: 22vh;
 }
 .popular .card img{
-    border-radius: 20px;
+    border-radius: 25px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    width: 8.5em;
+    width: 36vw;
     height: 100%;
 }
 .popular .legend{
     margin: auto 0;
-    margin-left: 11em;
+    margin-left: calc(100%/2.2);
     width: 46%;
     height: 80%;
 }
@@ -277,10 +284,10 @@ h2 .fa-chart-line{
     padding-bottom: 4%;
 }
 .home .card{
-    height: 12.7em;
+    height: 29.3vh;
 }
 .home img{
-    height: 8em;
+    height: 18vh;
 }
 .home .legend{
     line-height: 1.6;
@@ -289,8 +296,8 @@ h2 .fa-chart-line{
 .home-options{
     font-weight: 700;
     padding-top: 5%;
-    font-size: 1.15em;
-    width: 170px;
+    font-size: 1.1rem;
+    width: 7em;
 }
 .activity{
     order: 3;
@@ -299,23 +306,30 @@ h2 .fa-chart-line{
     height: 100%;
 }
 .activity .card{
-    height: 12em;
+    height: 28.3vh;
     margin-bottom: 7%;
 }
 .activity img{
     height: 100%;
     padding: 0;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
 }
 .activity .container-card .card:nth-of-type(4) img{
     filter: brightness(1.3);
 }
 .activity .legend{
-    padding: 5% 0 5% 5%;
     position: absolute;
     bottom: 0;
     background: white;
     width: 100%;
-    height: 55px;
+    height: 8.3vh;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+}
+.activity h3{
+    flex: 0;
+    margin: auto 5%;
 }
 .footer{
     background: #f2f2f2;
@@ -335,7 +349,7 @@ h2 .fa-chart-line{
 /* compatibilité desktop */
 @media screen and (min-width:1200px){
     .menu li{
-        font-size: 1.3em;
+        font-size: 1.1vmax;
     }
     .menu :nth-of-type(3),
     .menu :nth-of-type(4):hover{
@@ -357,8 +371,8 @@ h2 .fa-chart-line{
         width: 24%;
     }
     .logo img{
-        width: 6em;
-        margin-top: 2.5em;
+        width: 7vmax;
+        margin-top: 2em;
     }
     .tab{
         order: 2;
@@ -374,12 +388,10 @@ h2 .fa-chart-line{
         margin: 0;
         width: 70%;
     }
-    /* partie recherche et filtres */
-
     .container{
         margin: 0;
-        padding: 3% 0 0 3.2%;
-        font-size: 1.4em;
+        padding: 1% 0 0 3.2%;
+        font-size: 1.1vmax;
     }
     .intro{
         line-height: 2;
@@ -418,7 +430,7 @@ h2 .fa-chart-line{
         border-top-left-radius:0;
         border-bottom-right-radius: 20px;
         border-top-right-radius:20px;
-        width: 170px;
+        width: 30%;
     }
     .search-btn i{
         display: none;
@@ -428,16 +440,16 @@ h2 .fa-chart-line{
         font-family: 'Raleway', sans-serif;
         color: #fff;
         font-weight: 700;
-        font-size: 22px;
     }
     .filter-content{
         margin: 1.5% 0 0 0;
         flex-flow: row;
-        align-items: center;
+        align-items: baseline;
         width: 100%;
     }
     .filter-title{
         margin: 0 2.5% 0 0;
+        font-size: 1.1em;
     }
     .filter-category{
         margin: 1% 0 1% 0;
@@ -445,20 +457,24 @@ h2 .fa-chart-line{
         width: 65%;
     }
     .filter-category li{
-        margin: 0;
-        height: 60px;
+        margin-right: 0;
+        height: 3.2vmax;
+        border-radius: 40px;
         width: auto;
-        font-size: 1em;
+        font-size: 1.1em;
         padding-right: 25px;
     }
     .filter-category span{
-        height: 60px;
-        width: 60px;
-        margin-right: 15px;
+        height: 3.3vmax;
+        width: 3.3vmax;
+    }
+    .filter-category span i{
+        font-size: 1em;
     }
     .info{
         margin-top: 2%;
         padding: 0;
+        font-size: 1em;
     }
     .section-container{
         flex-flow: row wrap;
@@ -484,7 +500,7 @@ h2 .fa-chart-line{
         margin-bottom: 3.5%;
     }
     .legend{
-        font-size: 1em;
+        font-size: .9vmax;
     }
     .container-card{
         flex-flow: row wrap;
@@ -497,11 +513,11 @@ h2 .fa-chart-line{
     }
     .home .container-card .card{
         width: 30%;
-        height: 15em;
+        height: 12.5vmax;
         margin-top: 0;
     }
     .home img{
-        height: 9.5em;
+        height: 7.5vmax;
     }
     .home .legend{
         line-height: 1.5;
@@ -509,7 +525,7 @@ h2 .fa-chart-line{
     }
     .home-options{
         padding: 0;
-        font-size: 1.4em;
+        font-size: 1.3em;
         margin-top: 1%;
     }
     .popular{
@@ -522,21 +538,18 @@ h2 .fa-chart-line{
     }
     .popular .container-card .card{
         width: 100%;
-        height: 11em;
+        height: 9.4vmax;
         margin-bottom: 40px;
     }
     .popular .container-card .card img{
         height: 100%;
         width: 38%;
     }
-    .popular .legend{
-        margin-left: 190px;
-    }
     .activity{
         order: 3;
         width: 100%;
         padding: 4% 0 0 0;
-        height: 45em;
+        height: 40vmax;
     }
     .activity h2{
         padding-bottom: 1em;
@@ -585,25 +598,40 @@ h2 .fa-chart-line{
     .footer{
         display: flex;
         justify-content: space-between;
-        padding: 50px 0 0 60px;
+        padding: 50px 0 0 3%;
     }
     .footer nav{
         width: 60%;
+        font-size: 1vmax;
     }
 }
 
 /* compatibilité tablette */
-@media (min-width:760px) and (max-width:1100px){
+@media (min-width:760px) and (max-width:1200px){
+    .logo img{
+        width: 10em;
+    }
     .container{
         width: 93%;
+        padding-top: 5%;
     }
     form{
+        height: 4rem;
         width: 88%;
     }
     .search-bar{
         width: 90%;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
+    }
+    .search-btn{
+        width: 10rem;
+    }
+    .search-btn i, .search-icon i{
+        font-size: 1.5rem;
+    }
+    .filter-content, .section-container{
+        margin-top: 4%;
     }
     .filter-category{
         margin: 3% auto;
@@ -617,7 +645,9 @@ h2 .fa-chart-line{
     }
     .wrapper h2{
         width: 88%;
+        font-size: 2rem;
         margin: 0 auto;
+        padding-bottom: 3%;
     }
     .popular .container-card, .home .container-card, .activity .container-card{
         flex-direction: row;
@@ -630,6 +660,18 @@ h2 .fa-chart-line{
         width: 48%;
         flex-direction: column;
     }
+    .popular .legend, .home .legend, .activity .legend{
+        font-size: 1rem;
+    }
+    .popular .card{
+        height: 11rem;
+    }
+    .popular .card img{
+        width: 20vw;
+    }
+    .popular .card .legend{
+        margin-left: calc(100%/2);
+    }
     .home .card{
         height: 15em;
     }
@@ -637,7 +679,7 @@ h2 .fa-chart-line{
         height: 9em;
     }
     .home .legend{
-        padding: 0 0 5% 7%;
+        padding: 0 0 3% 7%;
     }
     .home-options{
         margin: auto;
