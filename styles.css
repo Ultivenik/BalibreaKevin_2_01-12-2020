@@ -655,7 +655,7 @@ h2 .fa-chart-line{
         flex-direction: column;
     }
     .popular .legend, .home .legend, .activity .legend{
-        font-size: 4vmin;
+        font-size: 2vmin;
     }
     .popular .card{
         height: 11rem;
