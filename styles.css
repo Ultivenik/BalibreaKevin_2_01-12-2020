@@ -191,7 +191,7 @@ form:focus-within{
     border: 1px solid #DEEBFF;
     padding: 5px 8px;
 }
-.section-container, .wrapper, .container-card, .legend{
+.section-container, .wrapper, .container-card, .card, .legend{
     display: flex;
     flex-flow: column;
 }
@@ -213,8 +213,6 @@ h2 .fa-chart-line{
     font-size: 1em;
 }
 .card{
-    display: flex;
-    flex-direction: column;
     background: #fff;
     border-radius: 20px;
     margin-bottom: 2vh;
